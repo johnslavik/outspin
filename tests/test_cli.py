@@ -2,14 +2,11 @@ from __future__ import annotations
 
 import os
 import shutil
-import sys
 from unittest.mock import Mock
 
 import pytest
 
 from outspin.__main__ import main
-
-IS_WINDOWS = sys.platform in ("win32", "cygwin")
 
 
 @pytest.mark.skipif(
