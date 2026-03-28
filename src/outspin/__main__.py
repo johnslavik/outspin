@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import signal
 import sys
 from typing import TYPE_CHECKING
 
@@ -14,9 +13,11 @@ if sys.platform == "win32" or sys.platform == "cygwin":
 
     EXIT_CODE = 0xC000013A
 else:
+    from signal import SIGINT
+
     from outspin.unix import _MODS, _getch
 
-    EXIT_CODE = signal.SIGINT + 128
+    EXIT_CODE = SIGINT + 128
 
 
 def main(getch: Callable[[], str] = _getch) -> None:
