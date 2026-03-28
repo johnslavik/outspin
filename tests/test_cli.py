@@ -14,7 +14,6 @@ from outspin.__main__ import main
     reason="Console script availability is tested in CI",
 )
 def test_console_script_installed() -> None:
-    """Test that the CLI can be imported and run."""
     assert shutil.which("outspin") is not None
 
 
