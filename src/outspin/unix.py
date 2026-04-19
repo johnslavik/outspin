@@ -13,6 +13,7 @@ from string import ascii_uppercase
 
 assert sys.platform != "win32" and sys.platform != "cygwin"  # noqa: S101
 
+_KT = str
 _MODS = {
     "\x1b": "esc",
     "\x7f": "backspace",

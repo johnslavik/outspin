@@ -11,6 +11,7 @@ from string import ascii_uppercase
 
 assert sys.platform == "win32" or sys.platform == "cygwin"  # noqa: S101
 
+_KT = bytes
 _MODS = {
     b"\x1b": "esc",
     b"\x08": "backspace",
